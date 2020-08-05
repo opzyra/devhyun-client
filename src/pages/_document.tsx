@@ -2,6 +2,8 @@ import React from "react";
 import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
+import { GlobalStyles } from "@/styles";
+
 export default class StoreDocument extends Document<any> {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
@@ -11,20 +13,19 @@ export default class StoreDocument extends Document<any> {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {...props} />),
+            sheet.collectStyles(
+              <>
+                <GlobalStyles />
+                <App {...props} />
+              </>
+            ),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
-      console.log(sheet.getStyleTags());
-      console.log(sheet.getStyleElement());
       return {
         ...initialProps,
         styles: (
           <>
-            <link
-              rel="stylesheet"
-              href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css"
-            />
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>

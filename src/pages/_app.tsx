@@ -9,8 +9,7 @@ import {
   NormalizedCacheObject,
 } from "@apollo/react-hooks";
 
-import { defaultTheme } from "@/styles/themes";
-import { GlobalStyle } from "@/styles/global";
+import { GlobalStyles, defaultTheme } from "@/styles";
 import withApollo from "@/hooks/withApollo";
 
 import Header from "@/components/Header";
@@ -32,11 +31,15 @@ class StoreApp extends App<IProps> {
         <Head>
           <title>GraphQL Job Board</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link
+            rel="stylesheet"
+            href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css"
+          />
         </Head>
         {/* adds the apollo provider to provide it's children with the apollo scope. */}
         <ApolloProvider client={apollo}>
           <ThemeProvider theme={defaultTheme}>
-            <GlobalStyle />
+            <GlobalStyles />
             <Header></Header>
             <Contents>
               <Component {...pageProps} />

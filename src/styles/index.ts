@@ -1,13 +1,16 @@
 import { createGlobalStyle } from "styled-components";
 
 import { ITheme } from "./themes";
-import reset from "./reset";
+import { reset } from "./reset";
 
 interface IThemeWrapper {
   theme: ITheme;
 }
 
-export const GlobalStyle = createGlobalStyle<IThemeWrapper>`
+export * from "./themes";
+export * from "./reset";
+
+export const GlobalStyles = createGlobalStyle<IThemeWrapper>`
 ${reset}
 #__next { height: 100% }
 `;

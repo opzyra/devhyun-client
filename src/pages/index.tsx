@@ -10,9 +10,18 @@ import Header from "@/components/Header";
 //     }
 //   }
 // `;
+import styled from "styled-components";
+
+const Input = styled.input`
+  padding: 0px;
+`;
 
 export default function Index() {
-  return <div>내용</div>;
+  return (
+    <div>
+      <Input type="text"></Input>
+    </div>
+  );
   // const { loading, data } = useQuery(JOBS_QUERY, {
   //   variables: { email: "opzyra@naver.com" },
   // });

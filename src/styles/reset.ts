@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-const reset = css`
+export const reset = css`
   * {
     outline: 0 !important;
     box-sizing: border-box;
@@ -229,5 +229,3 @@ const reset = css`
     cursor: pointer;
   }
 `;
-
-export default reset;
