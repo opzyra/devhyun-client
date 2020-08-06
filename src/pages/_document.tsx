@@ -1,9 +1,6 @@
 import React from "react";
 import Document, { Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-
-import { GlobalStyles } from "@/styles";
-
 export default class StoreDocument extends Document<any> {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
@@ -13,12 +10,7 @@ export default class StoreDocument extends Document<any> {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: (App) => (props) =>
-            sheet.collectStyles(
-              <>
-                <GlobalStyles />
-                <App {...props} />
-              </>
-            ),
+            sheet.collectStyles(<App {...props} />),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -39,9 +31,7 @@ export default class StoreDocument extends Document<any> {
   render() {
     return (
       <html>
-        <Head>
-          {this.props.styleTags /*rendering the actually stylesheet*/}
-        </Head>
+        <Head>{this.props.styleTags}</Head>
         <body>
           <Main />
           <NextScript />

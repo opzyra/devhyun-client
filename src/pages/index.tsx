@@ -10,18 +10,9 @@ import Header from "@/components/Header";
 //     }
 //   }
 // `;
-import styled from "styled-components";
-
-const Input = styled.input`
-  padding: 0px;
-`;
 
 export default function Index() {
-  return (
-    <div>
-      <Input type="text"></Input>
-    </div>
-  );
+  return <div></div>;
   // const { loading, data } = useQuery(JOBS_QUERY, {
   //   variables: { email: "opzyra@naver.com" },
   // });
