@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "@/components/Header";
+import Banner from "@/components/Banner";
 // import { useQuery } from "@apollo/react-hooks";
 // import { gql } from "apollo-boost";
 
@@ -12,7 +12,11 @@ import Header from "@/components/Header";
 // `;
 
 export default function Index() {
-  return <div></div>;
+  return (
+    <>
+      <Banner></Banner>
+    </>
+  );
   // const { loading, data } = useQuery(JOBS_QUERY, {
   //   variables: { email: "opzyra@naver.com" },
   // });
