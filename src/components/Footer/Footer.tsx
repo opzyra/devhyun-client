@@ -15,7 +15,7 @@ import mail from "@/assets/images/mail.png";
 import kakao from "@/assets/images/kakao.png";
 import git from "@/assets/images/git.png";
 
-const Header: React.FC = () => {
+const Footer: React.FC = () => {
   return (
     <FooterWrapper>
       <Inner>
@@ -57,4 +57,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default Footer;
