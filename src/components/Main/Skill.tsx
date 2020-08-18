@@ -1,12 +1,12 @@
-import { SkillWrapper, Inner, SkillList, SkillItem } from "./Skill.style";
+import { StyledSkill, Inner, SkillList, SkillItem } from "./Skill.style";
 
 import frontend from "@/assets/images/frontend.png";
 import backend from "@/assets/images/backend.png";
 import devops from "@/assets/images/devops.png";
 
-const Skill: React.FC = () => {
+export const Skill: React.FC = () => {
   return (
-    <SkillWrapper>
+    <StyledSkill>
       <Inner>
         <h2>Skills</h2>
         <p>
@@ -51,8 +51,6 @@ const Skill: React.FC = () => {
           </SkillItem>
         </SkillList>
       </Inner>
-    </SkillWrapper>
+    </StyledSkill>
   );
 };
-
-export default Skill;

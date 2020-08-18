@@ -2,6 +2,7 @@ import React from "react";
 import App from "next/app";
 import Head from "next/head";
 import { ThemeProvider } from "styled-components";
+import SwiperCore, { Navigation, Autoplay } from "swiper";
 
 import {
   ApolloProvider,
@@ -19,6 +20,10 @@ import Footer from "@/components/Footer";
 import "@/assets/css/default.css";
 import "@/assets/css/fonts.css";
 import "@/assets/css/next.css";
+
+import "swiper/swiper-bundle.min.css";
+
+SwiperCore.use([Navigation, Autoplay]);
 
 interface IProps {
   apollo: ApolloClient<NormalizedCacheObject>;

@@ -2,7 +2,7 @@ import Link from "next/link";
 import * as fns from "date-fns";
 
 import {
-  FooterWrapper,
+  StyledFooter,
   Inner,
   Links,
   Info,
@@ -17,7 +17,7 @@ import git from "@/assets/images/git.png";
 
 const Footer: React.FC = () => {
   return (
-    <FooterWrapper>
+    <StyledFooter>
       <Inner>
         <Links>
           <Brand>
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
           </div>
         </Info>
       </Inner>
-    </FooterWrapper>
+    </StyledFooter>
   );
 };
 

@@ -13,7 +13,7 @@ const codeAnimate = keyframes`
   }
 `;
 
-export const BannerWrapper = styled.section`
+export const StyledBanner = styled.section`
   background: url(${banner}) no-repeat;
   height: 450px;
   background-size: cover;

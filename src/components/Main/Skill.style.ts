@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
-import banner from "@/assets/images/banner.png";
-import symbol from "@/assets/images/symbol.png";
-import code from "@/assets/images/code.png";
-
-export const SkillWrapper = styled.section``;
+export const StyledSkill = styled.section``;
 
 export const Inner = styled.div`
   width: 1200px;

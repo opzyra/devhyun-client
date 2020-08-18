@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { HeaderWrapper, Inner, Brand, Nav } from "./Header.style";
+import { StyledHeader, Inner, Brand, Nav } from "./Header.style";
 
 import brand from "@/assets/images/brand.png";
 import NavLink from "./NavLink";
@@ -10,7 +10,7 @@ const Header: React.FC = () => {
   const router = useRouter();
 
   return (
-    <HeaderWrapper>
+    <StyledHeader>
       <Inner>
         <Brand>
           <Link href="/">
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
           </ul>
         </Nav>
       </Inner>
-    </HeaderWrapper>
+    </StyledHeader>
   );
 };
 

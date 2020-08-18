@@ -1,7 +1,7 @@
-import { ContentsWrapper } from "./Contents.style";
+import { StyledContents } from "./Contents.style";
 
 const Contents: React.FC = ({ children }) => {
-  return <ContentsWrapper>{children}</ContentsWrapper>;
+  return <StyledContents>{children}</StyledContents>;
 };
 
 export default Contents;

@@ -1,13 +1,7 @@
 import Typed from "react-typed";
-import {
-  BannerWrapper,
-  Inner,
-  Catchphrase,
-  Symbol,
-  Code,
-} from "./Banner.style";
+import { StyledBanner, Inner, Catchphrase, Symbol, Code } from "./Banner.style";
 
-const Banner: React.FC = () => {
+export const Banner: React.FC = () => {
   const phrases = [
     "NodeJS·React로 웹 애플리케이션을 구축합니다.",
     "뿌리깊은 프론트엔드 개발자를 목표로 노력합니다.",
@@ -15,7 +9,7 @@ const Banner: React.FC = () => {
   ];
 
   return (
-    <BannerWrapper>
+    <StyledBanner>
       <Inner>
         <Catchphrase>
           <h2>안녕하세요,</h2>
@@ -33,8 +27,6 @@ const Banner: React.FC = () => {
           <Code />
         </Catchphrase>
       </Inner>
-    </BannerWrapper>
+    </StyledBanner>
   );
 };
-
-export default Banner;

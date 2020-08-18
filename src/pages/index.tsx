@@ -1,6 +1,5 @@
 import React from "react";
-import Banner from "@/components/Banner";
-import Skill from "@/components/Skill";
+import { Banner, Project, Skill, Blog } from "@/components/Main";
 // import { useQuery } from "@apollo/react-hooks";
 // import { gql } from "apollo-boost";
 
@@ -17,6 +16,8 @@ export default function Index() {
     <>
       <Banner />
       <Skill />
+      <Project />
+      <Blog />
     </>
   );
   // const { loading, data } = useQuery(JOBS_QUERY, {

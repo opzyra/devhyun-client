@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FooterWrapper = styled.footer`
+export const StyledFooter = styled.footer`
   background: #39424c;
   font-size: 14px;
 `;
