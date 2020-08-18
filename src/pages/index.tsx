@@ -1,5 +1,8 @@
 import React from "react";
-import { Banner, Project, Skill, Blog } from "@/components/Main";
+import Banner from "@/components/Main/Banner";
+import Project from "@/components/Main/Project";
+import Skill from "@/components/Main/Skill";
+import Blog from "@/components/Main/Blog";
 // import { useQuery } from "@apollo/react-hooks";
 // import { gql } from "apollo-boost";
 

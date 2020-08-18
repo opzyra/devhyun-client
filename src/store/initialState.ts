@@ -1,3 +1,7 @@
-import { RootState } from "./config";
+export interface RootState {
+  isMobile: boolean;
+}
 
-export const initialState: RootState = {};
+export const initialState: RootState = {
+  isMobile: false,
+};

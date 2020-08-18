@@ -1,3 +1,3 @@
 import { combineReducers } from "redux";
-
-export const rootReducers = combineReducers({});
+import { appReducer } from "@/services/app";
+export const rootReducers = combineReducers({ app: appReducer });

@@ -11,6 +11,11 @@ export const StyledButton = styled.button<{
   border: 1px solid hsla(0, 0%, 59.2%, 0.24);
   background-color: #fff;
 
+  &:hover {
+    color: #fff;
+    background: #004abf;
+  }
+
   ${(props) => {
     switch (props.size) {
       case "small":

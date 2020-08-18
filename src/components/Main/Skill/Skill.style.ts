@@ -6,7 +6,6 @@ export const Inner = styled.div`
   width: 1200px;
   margin: 0 auto;
   position: relative;
-  box-sizing: border-box;
   text-align: center;
   padding: 80px 0px;
 
@@ -31,7 +30,6 @@ export const SkillItem = styled.li`
   display: inline-block;
   width: 33.3%;
   padding: 0 15px;
-  box-sizing: border-box;
 
   img {
     width: 64px;

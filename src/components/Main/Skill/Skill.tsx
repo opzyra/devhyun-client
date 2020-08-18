@@ -4,7 +4,7 @@ import frontend from "@/assets/images/frontend.png";
 import backend from "@/assets/images/backend.png";
 import devops from "@/assets/images/devops.png";
 
-export const Skill: React.FC = () => {
+const Skill: React.FC = () => {
   return (
     <StyledSkill>
       <Inner>
@@ -54,3 +54,5 @@ export const Skill: React.FC = () => {
     </StyledSkill>
   );
 };
+
+export default Skill;

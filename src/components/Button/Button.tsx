@@ -13,7 +13,8 @@ interface ButtonProps {
   mdi?: IconProps;
   route?: string;
   link?: string;
-  target?: boolean;
+  target?: string;
+  props?: React.ReactNode;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -25,36 +26,36 @@ const Button: React.FC<ButtonProps> = ({
   target,
   label,
   mdi,
+  props,
 }) => {
   if (route) {
     return (
-      <StyledButton buttonStyle={buttonStyle} size={size} type={type}>
-        <Link href={route}>
-          <>
-            <span>{label}</span>
-            {mdi && <Icon path={mdi} size={0.5}></Icon>}
-          </>
-        </Link>
-      </StyledButton>
+      <Link href={route}>
+        <StyledButton
+          buttonStyle={buttonStyle}
+          size={size}
+          type={type}
+          {...props}
+        >
+          <span>{label}</span>
+          {mdi && <Icon path={mdi} size={0.6}></Icon>}
+        </StyledButton>
+      </Link>
     );
   }
 
-  const click = () => {
-    target ? null : (location.href = link);
-  };
-
   return (
-    <StyledButton
-      buttonStyle={buttonStyle}
-      size={size}
-      type={type}
-      onClick={click}
-    >
-      <>
+    <a href={link} target={target}>
+      <StyledButton
+        buttonStyle={buttonStyle}
+        size={size}
+        type={type}
+        {...props}
+      >
         <span>{label}</span>
-        {mdi && <Icon path={mdi} size={0.5}></Icon>}
-      </>
-    </StyledButton>
+        {mdi && <Icon path={mdi} size={0.6}></Icon>}
+      </StyledButton>
+    </a>
   );
 };
 

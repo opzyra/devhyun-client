@@ -6,8 +6,6 @@ import createSagaMiddleware from "redux-saga";
 import { rootReducers } from "@/store/reducers";
 import rootSaga from "@/store/sagas";
 
-export interface RootState {}
-
 const makeStore = (_context: Context): Store => {
   const sagaMiddleware = createSagaMiddleware();
   const store = createStore(

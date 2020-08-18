@@ -1,7 +1,7 @@
 import Typed from "react-typed";
 import { StyledBanner, Inner, Catchphrase, Symbol, Code } from "./Banner.style";
 
-export const Banner: React.FC = () => {
+const Banner: React.FC = () => {
   const phrases = [
     "NodeJS·React로 웹 애플리케이션을 구축합니다.",
     "뿌리깊은 프론트엔드 개발자를 목표로 노력합니다.",
@@ -30,3 +30,5 @@ export const Banner: React.FC = () => {
     </StyledBanner>
   );
 };
+
+export default Banner;

@@ -1,0 +1,13 @@
+#__next {
+  height: 100%;
+}
+
+.tippy-tooltip.dark-theme {
+  background-color: #004abf;
+  color: #fff;
+  font-size: 12px;
+}
+
+.tippy-tooltip.dark-theme .tippy-backdrop {
+  background-color: #004abf;
+}

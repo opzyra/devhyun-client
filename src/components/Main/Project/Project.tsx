@@ -8,7 +8,7 @@ import {
   ProjectItem,
 } from "./Project.style";
 
-export const Project: React.FC = () => {
+const Project: React.FC = () => {
   return (
     <StyledProject>
       <Inner>
@@ -44,3 +44,5 @@ export const Project: React.FC = () => {
     </StyledProject>
   );
 };
+
+export default Project;

@@ -8,7 +8,6 @@ export const Inner = styled.div`
   width: 1200px;
   margin: 0 auto;
   position: relative;
-  box-sizing: border-box;
   text-align: center;
   padding: 80px 0px;
 
@@ -102,7 +101,6 @@ export const BlogContent = styled.div`
   padding: 30px 15px;
   text-align: left;
   height: 214px;
-  box-sizing: border-box;
   background: #fff;
   border: 1px solid hsla(0, 0%, 60.8%, 0.17);
   border-top: 0px;

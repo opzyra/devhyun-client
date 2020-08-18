@@ -11,9 +11,10 @@ import {
   BlogThumbnail,
   MoreButton,
 } from "./Blog.style";
-import Button from "../Button";
 
-export const Blog: React.FC = () => {
+import Button from "@/components/Button";
+
+const Blog: React.FC = () => {
   return (
     <StyledBlog>
       <Inner>
@@ -55,7 +56,7 @@ export const Blog: React.FC = () => {
             size="large"
             type="button"
             label="블로그 더 보기"
-            route="/"
+            route="/s"
             mdi={mdiArrowRight}
           />
         </MoreButton>
@@ -63,3 +64,5 @@ export const Blog: React.FC = () => {
     </StyledBlog>
   );
 };
+
+export default Blog;

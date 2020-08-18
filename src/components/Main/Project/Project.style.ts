@@ -11,7 +11,6 @@ export const Inner = styled.div`
   width: 1200px;
   margin: 0 auto;
   position: relative;
-  box-sizing: border-box;
   text-align: center;
   padding: 32px 0px;
 `;
