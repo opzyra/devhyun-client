@@ -6,6 +6,7 @@ import PageTitle from "@/components/PageTitle";
 import Keyword from "@/components/About/Keyword";
 import Introduce from "@/components/About/Introduce";
 import Stack from "@/components/About/Stack";
+import Brand from "@/components/About/Brand";
 
 export default function Index({ isMobile }) {
   const paths = ["데브현 메인", "소개"];
@@ -19,6 +20,7 @@ export default function Index({ isMobile }) {
       <Keyword isMobile={isMobile} />
       <Introduce />
       <Stack />
+      <Brand isMobile={isMobile} />
     </PageInner>
   );
 }
