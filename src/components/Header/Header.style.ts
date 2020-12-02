@@ -52,6 +52,10 @@ export const Nav = styled.nav`
         &:hover {
           color: ${(props) => props.theme.primaryColor};
         }
+
+        &.active {
+          color: ${(props) => props.theme.primaryColor};
+        }
       }
     }
   }

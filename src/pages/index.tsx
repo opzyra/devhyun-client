@@ -14,7 +14,7 @@ import Blog from "@/components/Main/Blog";
 //   }
 // `;
 
-export default function Index() {
+const Index = () => {
   return (
     <>
       <Banner />
@@ -28,4 +28,6 @@ export default function Index() {
   // });
   // if (loading) return <></>;
   // return <div>{data.login.email}</div>;
-}
+};
+
+export default Index;

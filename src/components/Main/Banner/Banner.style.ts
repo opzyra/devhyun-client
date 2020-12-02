@@ -60,5 +60,5 @@ export const Code = styled.div`
   height: 50px;
   background: url(${code}) no-repeat;
   background-size: contain;
-  animation: ${codeAnimate} 0.8s 1s infinite linear alternate;
+  animation: ${codeAnimate} 0.8s 0s infinite linear alternate;
 `;

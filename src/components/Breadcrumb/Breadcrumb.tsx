@@ -5,15 +5,17 @@ import { StyledBreadcrumb, Inner, BreadcrumbItem } from "./Breadcrumb.style";
 
 interface BreadcrumbProps {
   paths: Array<string>;
-  active: string;
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ paths, active }) => {
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ paths }) => {
   return (
     <StyledBreadcrumb>
       <Inner>
         {paths.map((path, index) => (
-          <BreadcrumbItem className={path === active && "active"} key={index}>
+          <BreadcrumbItem
+            className={index === paths.length - 1 && "active"}
+            key={index}
+          >
             <span>{path}</span>
             <Icon path={mdiMenuRight} size={0.5}></Icon>
           </BreadcrumbItem>

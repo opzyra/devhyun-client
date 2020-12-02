@@ -1,6 +1,6 @@
 import { StyledStack, Inner } from "./Stack.style";
 
-import StackList from "./StackList";
+import List from "./List";
 
 const Stack: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const Stack: React.FC = () => {
           기초 단계는 관심있게 학습 중이며 일정 학습정도가 되면 토이 프로젝트를
           진행합니다.
         </p>
-        <StackList></StackList>
+        <List></List>
       </Inner>
     </StyledStack>
   );

@@ -33,12 +33,15 @@ SwiperCore.use([Navigation, Autoplay]);
 
 interface IProps {
   apollo: ApolloClient<NormalizedCacheObject>;
-  appProps: {
-    isMobile: boolean;
-  };
 }
 
+const DeviceContext = React.createContext<boolean>(isMobile);
+
+export const DeviceConsumer = DeviceContext.Consumer;
+
 class StoreApp extends App<IProps> {
+  static isMobile: boolean = isMobile;
+
   public static async getInitialProps({ Component, ctx }: AppContext) {
     let pageProps = {};
     if (Component.getInitialProps) {
@@ -47,14 +50,14 @@ class StoreApp extends App<IProps> {
 
     if (ctx.req) {
       const md = new MobileDetect(ctx.req.headers["user-agent"]);
-      return { pageProps, appProps: { isMobile: !!md.mobile() } };
+      StoreApp.isMobile = !!md.mobile();
     }
 
-    return { pageProps, appProps: { isMobile } };
+    return { pageProps };
   }
 
   render() {
-    const { Component, pageProps, appProps, apollo, router } = this.props;
+    const { Component, pageProps, apollo, router } = this.props;
 
     const pathname = router.pathname.toLowerCase();
     const pageNotFound = pathname.startsWith("/404");
@@ -73,7 +76,9 @@ class StoreApp extends App<IProps> {
 
           <ApolloProvider client={apollo}>
             <ThemeProvider theme={defaultTheme}>
-              <Component {...appProps} {...pageProps} />
+              <DeviceContext.Provider value={StoreApp.isMobile}>
+                <Component {...pageProps} />
+              </DeviceContext.Provider>
             </ThemeProvider>
           </ApolloProvider>
         </>
@@ -90,11 +95,13 @@ class StoreApp extends App<IProps> {
 
         <ApolloProvider client={apollo}>
           <ThemeProvider theme={defaultTheme}>
-            <Header></Header>
-            <Contents>
-              <Component {...appProps} {...pageProps} />
-            </Contents>
-            <Footer></Footer>
+            <DeviceContext.Provider value={StoreApp.isMobile}>
+              <Header></Header>
+              <Contents>
+                <Component {...pageProps} />
+              </Contents>
+              <Footer></Footer>
+            </DeviceContext.Provider>
           </ThemeProvider>
         </ApolloProvider>
       </>
