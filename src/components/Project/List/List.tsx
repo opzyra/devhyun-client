@@ -8,13 +8,14 @@ export interface ListProps {
 const List: React.FC<ListProps> = ({ items }) => {
   return (
     <StyledList>
-      {items.map(({ href, mock, title, spec, period }) => (
+      {items.map(({ name, mock, title, spec, period }, index) => (
         <Item
-          href={href}
+          name={name}
           mock={mock}
           title={title}
           spec={spec}
           period={period}
+          key={index}
         />
       ))}
     </StyledList>

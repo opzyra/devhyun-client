@@ -3,17 +3,17 @@ import Link from "next/link";
 import { StyledItem } from "./Item.style";
 
 export interface ItemProps {
-  href: string;
+  name: string;
   mock: string;
   title: string;
   spec: string;
   period: string;
 }
 
-const Item: React.FC<ItemProps> = ({ href, mock, title, spec, period }) => {
+const Item: React.FC<ItemProps> = ({ name, mock, title, spec, period }) => {
   return (
     <StyledItem>
-      <Link href={`/project/${href}`}>
+      <Link href={`/project/${name}`}>
         <a>
           <img src={mock} alt={title} />
           <div className="title">{title}</div>
